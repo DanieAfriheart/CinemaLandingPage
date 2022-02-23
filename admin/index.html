@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- Uniconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <div class="main_area">
+            <nav>
+                <div class="brand">
+                    <img src="/img/logo.png" alt="">
+                </div>
+            </nav>
+
+            <main>
+                <div class="display">
+                    <div class="display_stat" id="staff">
+                        <p>Staff</p>
+                        <i class="uil uil-user-plus"></i>
+                        <a href="#">
+                            View
+                        </a>
+                    </div>
+
+                    <div class="display_stat" id="chairs">
+                        <p>Chairs</p>
+                        <i class="uil uil-user-circle"></i>
+                        <a href="#">
+                            View
+                        </a>
+                    </div>
+
+                    <div class="display_stat" id="customer">
+                        <p>Customer</p>
+                        <i class="uil uil-users-alt"></i>
+                        <a href="#">
+                            View
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="info">
+                    <!-- Registration Buttons -->
+                    <div class="reg_buttons">
+                        <ul>
+                            <li class="btn1" onclick="openPop()">
+                                <a href="#">
+                                    <i class="uil uil-user-plus" id="btn1"></i>
+                                    <span>
+                                        Add new staff
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="btn2" onclick="open2Pop()">
+                                <a href="#">
+                                    <i class="uil uil-user-circle"></i>
+                                    <span>
+                                        Set Chairs
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="btn3" onclick="open3Pop()">
+                                <a href="#">
+                                    <i class="uil uil-users-alt"></i>
+                                    <span>
+                                        Add New Customers
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--New Staff PopUp -->
+                    <div class="popup" id="popClose">
+                        <div class="pop_container">
+                            <header>
+                                <ul>
+                                    <li>
+                                        <h3>Add New Staff</h3>
+                                    </li>
+                                    <li><button class="pop_close" onclick="closePop()">
+                                            <i class="uil uil-times-circle"></i>
+                                        </button></li>
+                                </ul>
+                            </header>
+                            <form action="" class="pop_form">
+                                <div class="pop_cont">
+                                    <p>Username</p>
+                                    <input type="text" id="staffUsername">
+                                </div>
+                                <div class="pop_cont">
+                                    <p>Password</p>
+                                    <input type="text" id="staffPassword">
+                                </div>
+                                <div class="pop_cont">
+                                    <p>Email</p>
+                                    <input type="email" id="staffEmail">
+                                </div>
+                                <button class="pop_button" onclick="regStaff()">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--Set Chairs PopUp -->
+                    <div class="popup2" id="pop2Close">
+                        <div class="pop2_container">
+                            <header>
+                                <ul>
+                                    <li>
+                                        <h3>Set Chairs</h3>
+                                    </li>
+                                    <li><button class="pop2_close" onclick="close2Pop()">
+                                            <i class="uil uil-times-circle"></i>
+                                        </button></li>
+                                </ul>
+                            </header>
+                            <form action="" class="pop2_form">
+                                <div class="pop2_cont">
+                                    <p>Username</p>
+                                    <input type="text">
+                                </div>
+                                <div class="pop2_cont">
+                                    <p>Password</p>
+                                    <input type="text">
+                                </div>
+                                <div class="pop2_cont">
+                                    <p>Email</p>
+                                    <input type="email">
+                                </div>
+                                <button class="pop2_button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--New Customers PopUp -->
+                    <div class="popup3" id="pop3Close">
+                        <div class="pop3_container">
+                            <header>
+                                <ul>
+                                    <li>
+                                        <h3>Add Customer</h3>
+                                    </li>
+                                    <li><button class="pop3_close" onclick="close3Pop()">
+                                            <i class="uil uil-times-circle"></i>
+                                        </button></li>
+                                </ul>
+                            </header>
+                            <form action="" class="pop3_form">
+                                <div class="pop3_cont">
+                                    <p>Username</p>
+                                    <input type="text" id="custUsername">
+                                </div>
+                                <div class="pop3_cont">
+                                    <p>Password</p>
+                                    <input type="text" id="custPassword">
+                                </div>
+                                <div class="pop3_cont">
+                                    <p>Email</p>
+                                    <input type="email" id="custEmail">
+                                </div>
+                                <button class="pop3_button" onclick="regCustomer()">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <!-- List -->
+                    <div class="stat_area">
+                        <div class="stat_area1">
+
+                            <div class="header">
+                                <h3>
+
+                                    Staff List
+                                </h3>
+                            </div>
+                            <div class="list">
+                                <div class="listing">
+                                    <div>S/N</div>
+                                    <div>Fullname</div>
+                                    <div>Email</div>
+                                    <div>Password</div>
+                                </div>
+                            </div>
+                            <div class="in_list">
+
+                                <div class="in_listing">
+                                    <div>1</div>
+                                    <div>Daniel</div>
+                                    <div>Daniel@gmail.com</div>
+                                    <div>Password</div>
+
+                                    <div class="edit_btn">
+                                        <button class="edit">
+                                            <i class="uil uil-edit-alt"></i>
+                                            Edit
+                                        </button>
+                                        <button class="delete">
+                                            <i class="uil uil-trash-alt"></i>
+                                            Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat_area">
+                        <div class="stat_area1">
+
+                            <div class="header">
+                                <h3>
+
+                                    Customer List
+                                </h3>
+                            </div>
+                            <div class="list">
+                                <div class="listing">
+                                    <div>S/N</div>
+                                    <div>Fullname</div>
+                                    <div>Email</div>
+                                    <div>Password</div>
+                                </div>
+                            </div>
+                            <div class="in_list">
+
+                                <div class="in_listing">
+                                    <div>1</div>
+                                    <div>Daniel</div>
+                                    <div>Daniel@gmail.com</div>
+                                    <div>Password</div>
+
+                                    <div class="edit_btn">
+                                        <button class="edit">
+                                            <i class="uil uil-edit-alt"></i>
+                                            Edit
+                                        </button>
+                                        <button class="delete">
+                                            <i class="uil uil-trash-alt"></i>
+                                            Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

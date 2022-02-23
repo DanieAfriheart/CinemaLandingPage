@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: centr top;
+    background-repeat: no-repeat;
+}
+.container{
+    background-color: rgba(0,0,0,0.84);
+    height: 100%;
+
+}
+
+.form_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50vw;
+    margin: auto;
+    height: 82vh;
+    border-radius: 0.5em;
+    background-color: white;
+}
+
+.form_content {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form_ul {
+    text-align: left;
+}
+
+.form_content h1 {
+    font-size: 20px;
+    margin-bottom: 1em;
+    /* line-height: 2; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    list-style: disc;
+    line-height: 2;
+}
+
+.form_nav,
+.li,
+a {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: 0;
+    color: black;
+}
+
+a {
+    padding: 1em;
+}
+
+.active {
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #F2F2F5;
+}
+
+.form {
+    border-radius: 0.5em;
+    background-color: #F2F2F5;
+}
+
+.form_nav {
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+form{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.password{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.title{
+    display: flex;
+    line-height: 3;
+    align-items: center;
+}
+.title p{
+    font-weight: bolder;
+}
+input{
+    width: 100%;
+    height: 7vh;
+    padding: 1em;
+    border: 0;
+}
+
+i{
+    color: gray;
+    font-weight: 20;
+    font-size: small;
+}
+.note{
+    font-size: small;
+    font-weight: 20;
+    font-size: 17px;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+button{
+    background-color: #E83D8E;
+    color: white;
+    border-radius: 50px;
+    margin-top: 1em;
+    border: 0;
+    width: 100%;
+    border-radius: 50px;
+    padding: 1em;
+}
+
+
